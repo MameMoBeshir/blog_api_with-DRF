@@ -59,6 +59,10 @@ CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"]
 REST_FRAMEWORK={
     "DEFAULT_PERMISSION_CLASSES":[
         "rest_framework.permissions.AllowAny",
+    ],
+    "DEFAULT_AUTHENTICATION_CLASSES":[
+        "rest_framework.permissions.SessionAuthentication",
+        "rest_framework.permissions.TokenAuthentication",
     ]
 }
 
